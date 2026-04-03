@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastapi-backend-services"
+version = "1.0.0"
+description = "Production-ready FastAPI backend with PDF processing, AI integration, and multi-database connectivity"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
